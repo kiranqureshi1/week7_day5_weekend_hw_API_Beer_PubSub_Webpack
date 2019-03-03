@@ -16,4 +16,15 @@ Beer.prototype.getData = function () {
   });
 };
 
+//   PubSub.subscribe('SelectView:change', (event) => {
+//     const selectedIndex = event.detail;
+//     this.publishbeerData(selectedIndex);
+//   });
+// };
+//
+// Beer.prototype.publishbeerData = function(beerIndex){
+//   const selectedbeer = this.data[beerIndex];
+//   PubSub.publish('Selected Beer data ready', selectedBeer);
+// };
+
 module.exports = Beer;
