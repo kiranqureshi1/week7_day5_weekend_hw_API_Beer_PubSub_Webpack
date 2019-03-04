@@ -14,7 +14,21 @@ Beer.prototype.getData = function () {
     console.log(this.data);
     PubSub.publish("beer list data is ready", this.data);
   });
+
+  PubSub.subscribe('SelectView:change', (event) => {
+      const selectedIndex = event.detail;
+      console.log(selectedIndex);
+      this.publishbeerData(selectedIndex);
+    });
 };
+
+
+
+Beer.prototype.publishbeerData = function(beerIndex){
+  const selectedBeer = this.data[beerIndex];
+  PubSub.publish('Selected Beer data ready', selectedBeer);
+};
+
 
 //   PubSub.subscribe('SelectView:change', (event) => {
 //     const selectedIndex = event.detail;

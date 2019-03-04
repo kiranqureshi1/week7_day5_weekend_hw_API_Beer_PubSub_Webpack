@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () =>{
   beerListView.bindEvents();
 
 
-  const infodivB = document.querySelector('#singdetail');
-  const singleBeerView = new SingleBeerView(infodivB);
-  // console.log(singleBeerView);
-  singleBeerView.bindEvents();
+  // const infodivB = document.querySelector('#singdetail');
+  // const singleBeerView = new SingleBeerView(beer.data, infodivB);
+  // // console.log(singleBeerView);
+  // singleBeerView.bindEvents();
 
 
 

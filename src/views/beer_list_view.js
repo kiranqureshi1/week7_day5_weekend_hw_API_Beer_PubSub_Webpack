@@ -15,9 +15,9 @@ BeerListView.prototype.bindEvents = function () {
   });
 
   PubSub.subscribe('Selected Beer data ready', (event) => {
-    const singleBearInfo = event.detail;
-    console.log(singleBearInfo);
-    displaySingleBeer(singleBeerView);
+    const singleBeerInfo = event.detail;
+    console.log(singleBeerInfo);
+    this.displaySingleBeer(singleBeerInfo);
   });
 };
 
